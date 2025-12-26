@@ -23,11 +23,11 @@ license = "MIT OR Apache-2.0"
 [workspace.dependencies]
 anyhow = { version = "1", features = ["backtrace"] }
 clap = { version = "4.5.20", features = ["derive"] }
-cudarc = { version = "0.17.3", features = ["std", "cublas", "cublaslt", "curand", "driver", "nvrtc", "f16", "cuda-version-from-build-system", "dynamic-linking"], default-features=false }
-gemm = { version = "0.18.0", features = ["wasm-simd128-enable"] }
+cudarc = { version = "0.18.2", features = ["std", "cublas", "cublaslt", "curand", "driver", "nvrtc", "f16", "cuda-version-from-build-system", "dynamic-linking"], default-features=false }
+gemm = { version = "0.19.0", features = ["wasm-simd128-enable"] }
 half = { version = "2.3.1", features = ["num-traits", "use-intrinsics", "rand_distr"] }
-hf-hub = "0.3.2"
-libloading = "0.8.5"
+hf-hub = "0.4"
+libloading = "0.9"
 memmap2 = { version = "0.9.5", features = ["stable_deref_trait"] }
 metal = "0.29.0"
 num = "0.4.3"
@@ -37,18 +37,18 @@ objc = "0.2.7"
 ug = { path = "./ug-core", version = "0.5.0" }
 ug-cuda = { path = "./ug-cuda", version = "0.5.0" }
 ug-metal = { path = "./ug-metal", version = "0.5.0" }
-rand = "0.8.5"
-rand_distr = "0.4.3"
-rayon = "1.7.0"
-safetensors = "0.4.5"
+rand = "0.9"
+rand_distr = "0.5"
+rayon = "1.11"
+safetensors = { git = "https://github.com/Wireless4024/safetensors", rev = "13e948161e0e26badd585ad14a73058510df7580" }
 serde = { version = "1.0.198", features = ["derive"] }
 serde_json = "1.0.132"
-thiserror = "1"
-tokenizers = "0.20.3"
+thiserror = "2"
+tokenizers = "0.22.2"
 tracing = "0.1.40"
 tracing-chrome = "0.7.2"
 tracing-subscriber = "0.3.18"
-yoke = { version = "0.7.4", features = ["derive"] }
+yoke = { version = "0.8.1", features = ["derive"] }
 
 [profile.release]
 debug = true
